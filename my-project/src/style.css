@@ -8,11 +8,11 @@
   color: rgba(255, 255, 255, 0.87);
   
   background-image: url("/HikingImage.jpg");
-    background-repeat: no-repeat;                    /* 2. Prevent repetition */
-    background-size: cover;                          /* 3. Cover the entire viewport */
-    background-position: center;                     /* 4. Center the image */
-    background-attachment: fixed;                    /* 5. Keep the image fixed when scrolling */
-    background-color: #242424b5;                       /* 6. A background color in case the image doesn't load */
+  background-repeat: no-repeat;                    /* 2. Prevent repetition */
+  background-size: cover;                          /* 3. Cover the entire viewport */
+  background-position: center;                     /* 4. Center the image */
+  background-attachment: fixed;                    /* 5. Keep the image fixed when scrolling */
+  background-color: #242424b5;                       /* 6. A background color in case the image doesn't load */
 
   overflow-x: hidden;
   font-synthesis: none;
@@ -153,7 +153,7 @@ body {
 
   /* dynamic origin */
   clip-path: circle(150% at var(--clip-x) var(--clip-y));
-  transition: clip-path 1.6s ease-in-out;
+  transition: clip-path 0.6s ease-in-out;
 }
 
 .navbarMenu.closed {

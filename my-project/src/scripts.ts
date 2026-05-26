@@ -8,7 +8,7 @@ interface Page {
 
 // Pages that I can add to the navbar 
 const pages: Page[] = [
-  { name: "Home", href: "/" },
+  { name: "Home", href: "index.html" }, // change to "/" for root hosting when I host on other than homedir
   { name: "About Me", href: "aboutme.html" },
   { name: "Hobbies", href: "hobbies.html" },
   { name: "Anime", href: "anime.html" }
@@ -48,7 +48,8 @@ export function createNavbar(): void {
   }
 
   const currPage = window.location.pathname.split("/").pop();
-
+// Change currpage to accomadate for root rather than index.html, Can be fixed when I host on other than homedir :) 
+// Synonomous to (currentPage) => (currentPage || "/")
   navbar.innerHTML = `
     <nav class="navbarContainer">
       <img src="navigation-bar.png" id="navbarToggle" alt="Menu Icon">
@@ -56,7 +57,7 @@ export function createNavbar(): void {
         ${pages
           .map(
             (page) => `
-          <a class="navitem ${page.href === (currPage || "/")  ? "activeNavItem" : ""}"
+          <a class="navitem ${page.href === (currPage || "index.html")  ? "activeNavItem" : ""}" 
              href="${page.href}">
              ${page.name}
           </a>
